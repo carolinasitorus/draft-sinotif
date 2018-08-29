@@ -18,3 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'users', 'middleware' => ['role:superadmin|supervisor|junior']], function() {
+    Route::get('/create', function () {
+        return view('users');
+    })->name('users.create');
+    Route::get('/update', function () {
+        return view('users');
+    })->name('users.update');
+    Route::get('/delete', function () {
+        return view('users');
+    })->name('users.delete');
+    Route::get('/publish', function () {
+        return view('users');
+    })->name('users.publish');
+});
+
+

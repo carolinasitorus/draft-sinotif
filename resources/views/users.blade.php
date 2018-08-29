@@ -14,15 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    <br>
-                    <a href="{{ route('users.create') }}">Create</a>
-                    <br>
-                    <a href="{{ route('users.update') }}">Update</a>
-                    <br>
-                    <a href="{{ route('users.delete') }}">Delete</a>
-                    <br>
-                    <a href="{{ route('users.publish') }}">Publish</a>
+                    About Us!
                 </div>
             </div>
         </div>
